@@ -14,11 +14,11 @@ let ShowCBFunc = function(res) {
 };
 
 function ShowMes(res) {
-    let mes = "Успешно";
-    if(!res.success) {
-        mes = "ошибка";
-    }
-    MManager.setMessage(res.success, mes);
+    MManager.setMessage(res.success, res.error);
+}
+
+function ShowMes1(res) {
+    FvWidget.setMessage(res.success, res.error);
 }
 
 let GetRBCBFunc = function(res) {
@@ -71,7 +71,7 @@ let GetFvWdCBFunc = function(res) {
 
 let AddFvCBFunc = function(res) {
     GetFvWdCBFunc(res);
-    ShowMes(res);
+    ShowMes1(res);
 };
 
 let AddFvReq = function(data) {

@@ -25,7 +25,7 @@ usForm.loginFormCallback = function (data) {
 }
 
 usForm.registerFormCallback = function (data) {
-    ApiConnector.register(data, LogCBFunc);
+    ApiConnector.register(data, RegCBFunc);
 }
 
 
