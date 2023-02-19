@@ -14,11 +14,19 @@ let ShowCBFunc = function(res) {
 };
 
 function ShowMes(res) {
-    MManager.setMessage(res.success, res.error);
+    let mes = "Успех";
+    if(!res.success) {
+       mes = res.error;
+    }
+    MManager.setMessage(res.success, mes);
 }
 
 function ShowMes1(res) {
-    FvWidget.setMessage(res.success, res.error);
+    let mes = "Успех";
+    if(!res.success) {
+       mes = res.error;
+    }
+    FvWidget.setMessage(res.success, mes);
 }
 
 let GetRBCBFunc = function(res) {
